@@ -6,7 +6,15 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `Meissam | Front-End Software Engineer`,
+    siteTitleAlt: `Meissam | Front-End Software Engineer`,
+    siteImage:`/logo.png`,
+    copyright:`Meissam`,
+    siteHeadline:`Meissam | Front-End Software Engineer`,
+    siteUrl:`https://www.meissam.net`,
+    siteDescription:`A Front-End Software Engineer, AI Enthusiast and Open Source Advocate who is Interested in Art, Culture and Science`,
+    author:`Meissam`,
+    siteLanguage:`en`
   },
   plugins: [
     {
@@ -19,18 +27,24 @@ module.exports = {
             slug: `/blog`,
           },
           {
+            title: `Projects`,
+            slug: `/projects`,
+          },
+          {
             title: `About`,
             slug: `/about`,
           },
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            name: `Github`,
+            icon:`icon-github`,
+            url: `https://github.com/meissam`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            name: `Linkedin`,
+            icon:`icon-linkedin`,
+            url: `https://www.linkedin.com/in/meissam-rasouli/`,
           },
         ],
       },
@@ -38,16 +52,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        trackingId: `UA-161559702-1`,
       },
     },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Meissam | Front-End Software Engineer`,
+        short_name: `Meissam | Front-End Software Engineer`,
+        description: `A Front-End Software Engineer, AI Enthusiast and Open Source Advocate who is Interested in Art, Culture and Science`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
