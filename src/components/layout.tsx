@@ -8,6 +8,7 @@ import Header from "./header"
 import Footer from "./footer"
 import CodeStyles from "../styles/code"
 import SkipNavLink from "./skip-nav"
+import "../styles/global.css"
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
@@ -43,7 +44,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
     />
     <SEO />
     <SkipNavLink>Skip to content</SkipNavLink>
-    <Container>
+    <Container className="main-container">
       <Header />
       <Box id="skip-nav" sx={{ ...CodeStyles }} className={className}>
         {children}
