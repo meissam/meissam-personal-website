@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header sx={{ mb: [5, 6] }}>
-      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
+      <Flex className="main-header" sx={{ alignItems: `center`, justifyContent: `space-between` }}>
 
         <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
           <Link
