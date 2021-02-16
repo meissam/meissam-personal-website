@@ -26,6 +26,7 @@ const Footer = () => {
 
         <Link sx={{
         ml: `10px`,
+        color:`secondary`
       }}
           aria-label="Link to the theme's GitHub repository"
           href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
@@ -35,7 +36,9 @@ const Footer = () => {
         {` `}
         by
         {` `}
-        <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
+        <Link sx={{
+        color:`secondary`
+      }} aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
           LekoArts
         </Link>
       </div>
