@@ -36,7 +36,7 @@ const Blog = ({ posts }: PostsProps) => {
         </Heading>
         <TLink
           as={Link}
-          sx={{ variant: `links.secondary`, marginY: 2 }}
+          sx={{ variant: `links.secondary`, marginY: 2, fontWeight:`bold` }}
           to={replaceSlashes(`/${basePath}/${tagsPath}`)}
         >
           View all tags
