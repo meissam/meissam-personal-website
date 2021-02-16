@@ -30,21 +30,22 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
       cursor: `pointer`,
       padding: 0,
       appearance: `none`,
+      marginLeft:`10px`,
       "&:hover, &:focus": { opacity: 1 },
     }}
   >
     <div
       sx={{
         position: `relative`,
-        width: `24px`,
-        height: `24px`,
+        width: `16px`,
+        height: `16px`,
         borderRadius: `50%`,
         border: (t) => (isDark ? `4px solid ${t.colors.toggleIcon}` : `none`),
         backgroundColor: isDark ? `toggleIcon` : `transparent`,
         transform: isDark ? `scale(0.55)` : `scale(1)`,
         transition: `all 0.45s ease`,
         overflow: isDark ? `visible` : `hidden`,
-        boxShadow: (t) => (isDark ? `none` : `inset 8px -8px 0px 0px ${t.colors.toggleIcon}`),
+        boxShadow: (t) => (isDark ? `none` : `inset 6px -5px 0px 0px ${t.colors.toggleIcon}`),
         "&:before": {
           content: `""`,
           position: `absolute`,
@@ -60,15 +61,15 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
         },
         "&:after": {
           content: `""`,
-          width: `8px`,
-          height: `8px`,
+          width: `6px`,
+          height: `6px`,
           borderRadius: `50%`,
           margin: `-4px 0 0 -4px`,
           position: `absolute`,
           top: `50%`,
           left: `50%`,
           boxShadow: (t) =>
-            `0 -23px 0 ${t.colors.toggleIcon}, 0 23px 0 ${t.colors.toggleIcon}, 23px 0 0 ${t.colors.toggleIcon}, -23px 0 0 ${t.colors.toggleIcon}, 15px 15px 0 ${t.colors.toggleIcon}, -15px 15px 0 ${t.colors.toggleIcon}, 15px -15px 0 ${t.colors.toggleIcon}, -15px -15px 0 ${t.colors.toggleIcon}`,
+            `0 -20px 0 ${t.colors.toggleIcon}, 0 20px 0 ${t.colors.toggleIcon}, 20px 0 0 ${t.colors.toggleIcon}, -20px 0 0 ${t.colors.toggleIcon}, 15px 15px 0 ${t.colors.toggleIcon}, -15px 15px 0 ${t.colors.toggleIcon}, 15px -15px 0 ${t.colors.toggleIcon}, -15px -15px 0 ${t.colors.toggleIcon}`,
           transform: isDark ? `scale(1)` : `scale(0)`,
           transition: `all 0.35s ease`,
         },

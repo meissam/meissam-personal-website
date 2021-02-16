@@ -6,30 +6,34 @@ const theme = merge(tailwind, {
   initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
-    primary: tailwind.colors.purple[7],
-    secondary: `#5f6c80`,
+    background:`#fff`,
+    body:`#2f4858`,
+    primary: `#7d0d3f`,
+    secondary: `#508072`,
     toggleIcon: tailwind.colors.gray[8],
-    heading: tailwind.colors.black,
+    mainHeading: `#508072`,
+    subHeading: `#404040`,
     divide: tailwind.colors.gray[4],
     modes: {
       dark: {
-        text: tailwind.colors.gray[4],
-        primary: tailwind.colors.purple[5],
-        secondary: `#7f8ea3`,
-        toggleIcon: tailwind.colors.gray[4],
         background: `#1A202C`,
-        heading: tailwind.colors.white,
+        body:`#cbd5e0`,
+        primary: `#E2D7FF`,
+        secondary: `#fff`,
+        toggleIcon: tailwind.colors.gray[4],
+        mainHeading: `#E2D7FF`,
+        subHeading: `#E2D7FF`,
         divide: tailwind.colors.gray[8],
         muted: tailwind.colors.gray[8],
       },
     },
   },
   fonts: {
-    body: `"IBM Plex Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
+    body: `"Exo 2", "Roboto", "Segoe UI", "IBM Plex Sans", -apple-system, BlinkMacSystemFont,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
   },
   styles: {
     root: {
-      color: `text`,
+      color:`body`,
       backgroundColor: `background`,
       margin: 0,
       padding: 0,
@@ -40,11 +44,11 @@ const theme = merge(tailwind, {
     },
     p: {
       fontSize: [1, 1, 2],
-      letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
       "--x-height-multiplier": 0.35,
       wordBreak: `break-word`,
+     
     },
     ul: {
       li: {
@@ -94,6 +98,9 @@ const theme = merge(tailwind, {
       fontSize: 1,
       mb: 2,
     },
+    pre: {
+      fontFamily: 'monospace',
+    },
     blockquote: {
       borderLeftColor: `primary`,
       borderLeftStyle: `solid`,
@@ -142,7 +149,6 @@ const theme = merge(tailwind, {
       fontFamily: `heading`,
       fontWeight: `heading`,
       lineHeight: `heading`,
-      color: `heading`,
     },
   },
   copyButton: {
@@ -183,8 +189,8 @@ const theme = merge(tailwind, {
     },
   },
   links: {
-    secondary: {
-      color: `secondary`,
+    primary: {
+      color: `primary`,
       textDecoration: `none`,
       ":hover": {
         color: `heading`,
@@ -196,7 +202,7 @@ const theme = merge(tailwind, {
     },
     listItem: {
       fontSize: [1, 2, 3],
-      color: `text`,
+      color: `body`,
     },
   },
 })

@@ -6,16 +6,17 @@ import useSiteMetadata from "../hooks/use-site-metadata"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 
 const HeaderTitle = () => {
-  const { siteTitle } = useSiteMetadata()
+  const { siteTitle , author, siteHeadline } = useSiteMetadata()
   const { basePath } = useMinimalBlogConfig()
 
   return (
     <Link
       to={replaceSlashes(`/${basePath}`)}
       aria-label={`${siteTitle} - Back to home`}
-      sx={{ color: `heading`, textDecoration: `none` }}
+      sx={{ color: `heading`, textDecoration: `none`, marginLeft:`10px` }}
     >
-      <div sx={{ my: 0, fontWeight: `medium`, fontSize: [3, 4] }}>{siteTitle}</div>
+      <div sx={{ my: 0, fontWeight: `700`, fontSize: [2], color:`primary` }}>{author}</div>
+      <div sx={{ my: 0, fontWeight: `700`, fontSize: [`12px`], color:`secondary` }}>{siteHeadline}</div>
     </Link>
   )
 }

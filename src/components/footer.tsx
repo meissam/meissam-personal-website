@@ -22,17 +22,11 @@ const Footer = () => {
       }}
     >
       <div>
-        &copy; {new Date().getFullYear()} by {author}. All rights reserved.
-      </div>
-      <div>
+        &copy; {new Date().getFullYear()} by {author}. All rights reserved. 
 
-  
-
-        <HeaderExternalLinks />
-  
-
-
-        <Link
+        <Link sx={{
+        ml: `10px`,
+      }}
           aria-label="Link to the theme's GitHub repository"
           href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
         >
@@ -44,6 +38,16 @@ const Footer = () => {
         <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
           LekoArts
         </Link>
+      </div>
+      <div>
+
+
+
+        <HeaderExternalLinks />
+
+
+
+
       </div>
     </footer>
   )

@@ -25,21 +25,24 @@ const Header = () => {
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
 
         <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
-          <img src={siteImage} alt={siteTitle} />
+          <Link
+            to={replaceSlashes(`/${basePath}`)}
+            aria-label={`${siteTitle} - Back to home`}
+                     >
+            <img src={siteImage} alt={siteTitle} sx={{ height: `50px`, width: `50px`, borderRadius: `25px` }} />
+          </Link>
           <HeaderTitle />
         </Flex>
 
-        <div className="main-menu" 
+        <div className="main-menu"
           sx={{
             boxSizing: `border-box`,
             display: `flex`,
             margin: 0,
-            variant: `dividers.bottom`,
             alignItems: `center`,
             justifyContent: `space-between`,
-            mt: 3,
-            color: `secondary`,
-            a: { color: `secondary`, ":hover": { color: `heading` } },
+            color: `primary`,
+            a: { color: `primary`, ":hover": { color: `heading` } },
             flexFlow: `wrap`,
           }}
         >

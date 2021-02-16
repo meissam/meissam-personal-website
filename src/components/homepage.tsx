@@ -41,12 +41,9 @@ const Homepage = ({ posts }: PostsProps) => {
         <Hero />
       </section>
       <Title text="Latest Posts">
-        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
+        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}  sx={{ color:'primary', fontWeight:`bold`, textDecoration:`none`, ":hover" : { textDecoration:`underline`} }}>Read all posts</Link>
       </Title>
-      <Listing posts={posts} showTags={false} />
-      <List sx={{ variant: `section_bottom` }}>
-        <Bottom />
-      </List>
+      <Listing posts={posts} showTags={true} />
     </Layout>
   )
 }

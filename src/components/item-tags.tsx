@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from "react"
-import { Link as TLink } from "theme-ui"
+import {jsx, Link as TLink } from "theme-ui"
 import { Link } from "gatsby"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import replaceSlashes from "../utils/replaceSlashes"
